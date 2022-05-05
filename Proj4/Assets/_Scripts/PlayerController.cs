@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
    float _baseSpeed = 10.0f;
-   float _gravidade = 9.8f;
+   float _gravidade = 4f;
 
    //Referência usada para a câmera filha do jogador
    GameObject playerCamera;
@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
    float cameraRotation;
 
    CharacterController characterController;
+
+    public float jumpForce = 30.0f;
+
 
    void Start()
    {
@@ -31,7 +34,25 @@ public class PlayerController : MonoBehaviour
        float y = 0;
        if(!characterController.isGrounded){
            y = -_gravidade;
+       }else{
+            if(Input.GetAxisRaw("Jump") != 0)
+            {
+                Debug.Log("Jump");
+                y = Mathf.Sqrt(jumpForce);
+            }
        }
+
+
+        
+
+    //    if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME) {
+    //         gm.ChangeState(GameManager.GameState.PAUSE);
+    //     }
+
+    //     if(gm.timeRemainig <=0  && gm.gameState == GameManager.GameState.GAME) {
+    //         gm.ChangeState(GameManager.GameState.ENDGAME);
+    //         Reset();
+    //     }
        
        
         //Tratando movimentação do mouse
@@ -46,7 +67,8 @@ public class PlayerController : MonoBehaviour
        Mathf.Clamp(cameraRotation, -75.0f, 75.0f);
        
        characterController.Move(direction * _baseSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.up, mouse_dX);
+    
+       transform.Rotate(Vector3.up, mouse_dX);
 
 
        playerCamera.transform.localRotation = Quaternion.Euler(cameraRotation, 0.0f, 0.0f);
