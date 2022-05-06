@@ -77,6 +77,10 @@
      <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\TiltShift.cs" />
      <Compile Include="Assets\_Scripts\Floater.cs" />
      <Compile Include="Assets\_Scripts\Pickup.cs" />
+     <Compile Include="Assets\FurnishedCabin\Scripts\Player\PlayerLook.cs" />
+     <Compile Include="Assets\FurnishedCabin\Scripts\Player\PlayerMove.cs" />
+     <Compile Include="Assets\FurnishedCabin\Scripts\MoveableObject.cs" />
+     <Compile Include="Assets\FurnishedCabin\Scripts\MoveObjectController.cs" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
