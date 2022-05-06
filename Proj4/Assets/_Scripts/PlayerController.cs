@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-   float _baseSpeed = 10.0f;
+   float _baseSpeed = 5.0f;
    float _gravidade = 4f;
 
    //Referência usada para a câmera filha do jogador
