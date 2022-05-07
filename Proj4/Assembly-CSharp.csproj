@@ -83,6 +83,7 @@
      <Compile Include="Assets\FurnishedCabin\Scripts\MoveObjectController.cs" />
      <Compile Include="Assets\_Scripts\EnterHouse.cs" />
      <Compile Include="Assets\_Scripts\Sokoban.cs" />
+     <Compile Include="Assets\Clock\Scripts\Clock.cs" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
