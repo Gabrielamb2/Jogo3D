@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
        characterController = GetComponent<CharacterController>();
        playerCamera = GameObject.Find("Main Camera");
        cameraRotation = 0.0f;
+       gm = GameManager.GetInstance();
    }
 
    void Update()
