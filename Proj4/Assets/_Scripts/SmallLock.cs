@@ -10,7 +10,7 @@ public class SmallLock : MonoBehaviour
 
     private void Start()
     {
-        result = new int[]{0,0,0,0};
+        result = new int[]{0,0,0};
         correctCombination = new int[] {2,8,6};
         isOpened = false;
         Rotate.Rotated += CheckResults;
