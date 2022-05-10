@@ -14,6 +14,9 @@ public class GameManager
 
    public bool waspaused = false;
 
+   public bool puzzle1_solved = false;
+   public bool puzzle2_solved = false;
+
 
    public static GameManager GetInstance()
    {
@@ -45,6 +48,8 @@ public class GameManager
     private void Reset()
     {
         timeRemainig = 300;
+        puzzle1_solved = false;
+        puzzle2_solved = false;
     }
    private GameManager()
    {

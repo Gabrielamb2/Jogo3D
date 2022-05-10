@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public static int objects = 0;
-	void Awake () {
-        objects++;
-	}	
-    void OnTriggerEnter(Collider plyr)
-    {
-        if (plyr.gameObject.tag == "Player")
-            objects--;
-        gameObject.SetActive(false);
-    }
+    public GameObject obj;
+
+    private void OnTriggerEnter(Collider collision)
+  {
+      Debug.Log("ola" + collision.gameObject.tag);
+      
+      if (collision.CompareTag("Player")){
+          Debug.Log("oiee");
+          Destroy(gameObject);
+      }
+  }
+
+
 }
 
 // https://www.youtube.com/watch?v=NebeDbWjIXA

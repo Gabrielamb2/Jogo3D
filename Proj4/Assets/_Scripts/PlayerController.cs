@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
        characterController = GetComponent<CharacterController>();
        playerCamera = GameObject.Find("Main Camera");
        cameraRotation = 0.0f;
+       gm = GameManager.GetInstance();
    }
 
    void Update()
@@ -39,22 +40,10 @@ public class PlayerController : MonoBehaviour
        }else{
             if(Input.GetAxisRaw("Jump") != 0)
             {
-                Debug.Log("Jump");
+                // Debug.Log("Jump");
                 y = Mathf.Sqrt(jumpForce);
             }
        }
-
-
-        
-
-    //    if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME) {
-    //         gm.ChangeState(GameManager.GameState.PAUSE);
-    //     }
-
-    //     if(gm.timeRemainig <=0  && gm.gameState == GameManager.GameState.GAME) {
-    //         gm.ChangeState(GameManager.GameState.ENDGAME);
-    //         Reset();
-    //     }
        
        
         //Tratando movimentação do mouse
@@ -76,7 +65,7 @@ public class PlayerController : MonoBehaviour
        playerCamera.transform.localRotation = Quaternion.Euler(cameraRotation, 0.0f, 0.0f);
 
        if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
-           Debug.Log("PAUSE");
+        //    Debug.Log("PAUSE");
             gm.ChangeState(GameManager.GameState.PAUSE);
         }
 
@@ -90,7 +79,7 @@ void LateUpdate()
   Debug.DrawRay(playerCamera.transform.position, transform.forward*10.0f, Color.magenta);
   if(Physics.Raycast(playerCamera.transform.position, transform.forward, out hit, 100.0f))
   {
-     Debug.Log(hit.collider.name);
+    //  Debug.Log(hit.collider.name);
    }
 }
 }
