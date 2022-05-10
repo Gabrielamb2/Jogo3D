@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce = 30.0f;
 
+    GameManager gm;
+
 
    void Start()
    {
@@ -72,6 +74,11 @@ public class PlayerController : MonoBehaviour
 
 
        playerCamera.transform.localRotation = Quaternion.Euler(cameraRotation, 0.0f, 0.0f);
+
+       if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
+           Debug.Log("PAUSE");
+            gm.ChangeState(GameManager.GameState.PAUSE);
+        }
 
    }
 

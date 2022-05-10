@@ -88,6 +88,7 @@
      <Compile Include="Assets\_Scripts\ActiveOnSomeStates.cs" />
      <Compile Include="Assets\UI_MenuPrincipal.cs" />
      <Compile Include="Assets\_Scripts\MenuScript.cs" />
+     <Compile Include="Assets\_Scripts\PauseScript.cs" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
