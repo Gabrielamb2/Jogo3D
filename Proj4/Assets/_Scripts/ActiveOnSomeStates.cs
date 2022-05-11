@@ -27,4 +27,8 @@ public class ActiveOnSomeStates : MonoBehaviour
            gameObject.SetActive(false);
        }
    }
+
+   void OnDestroy(){
+       GameManager.changeStateDelegate -= UpdateVisibility;
+   }
 }

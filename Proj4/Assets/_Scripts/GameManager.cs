@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 
 public class GameManager
@@ -19,6 +21,9 @@ public class GameManager
    public bool victory = false;
    public bool has_diamond = false;
    public bool has_key = false;
+   public bool start_tutorial = false;
+   public bool start_historinha = false;
+   
 
 
 
@@ -51,17 +56,21 @@ public class GameManager
 
     private void Reset()
     {
-        timeRemainig = 420;
+        timeRemainig = 600;
         puzzle1_solved = false;
         puzzle2_solved = false;
         victory = false;
         has_diamond = false;
         has_key = false;
+        start_historinha = true;
+        start_tutorial = true;
+        SceneManager.LoadScene("SampleScene");
+
     }
    private GameManager()
    {
        gameState = GameState.MENU;
-       timeRemainig = 420;
+       timeRemainig = 600;
        victory = false;
    }
 }
