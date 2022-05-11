@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
        
        
         //Tratando movimentação do mouse
+        Cursor.lockState = CursorLockMode.Confined;
        float mouse_dX = Input.GetAxis("Mouse X");
        float mouse_dY = Input.GetAxis("Mouse Y");
        
