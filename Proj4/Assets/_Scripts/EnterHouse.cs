@@ -20,9 +20,10 @@ public class EnterHouse : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
   {      
       if (collision.CompareTag("Player")){
-          if (gm.has_key)
+          if (gm.has_key){
             audio.Play();  
             anim.SetTrigger("open");  
+          }
       }
   }
 }

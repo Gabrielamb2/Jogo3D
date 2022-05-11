@@ -8,6 +8,9 @@ public class LockControl : MonoBehaviour
     private bool isOpened;
     GameManager gm;
 
+    private AudioSource audio;
+
+
     private void Start()
     {
         result = new int[]{0,0,0,0};
@@ -15,6 +18,7 @@ public class LockControl : MonoBehaviour
         isOpened = false;
         Rotate.Rotated += CheckResults;
         gm = GameManager.GetInstance();
+        audio = GetComponent<AudioSource>();
     }
 
     private void CheckResults(string wheelName, int number)
@@ -42,6 +46,7 @@ public class LockControl : MonoBehaviour
             && result[2] == correctCombination[2] && result[3] == correctCombination[3] && !isOpened)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z);
+            audio.Play();  
             isOpened = true;
             gm.puzzle1_solved = true;
         }
