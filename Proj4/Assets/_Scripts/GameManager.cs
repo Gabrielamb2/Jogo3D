@@ -7,7 +7,7 @@ public class GameManager
 {
    public enum GameState { MENU, GAME, PAUSE, ENDGAME };
    public GameState gameState { get; private set; }
-   public float timeRemainig;
+   public float timeRemainig = 0;
 
    public bool pause_to_menu = false;
    private static GameManager _instance;
@@ -16,6 +16,7 @@ public class GameManager
 
    public bool puzzle1_solved = false;
    public bool puzzle2_solved = false;
+   public bool victory = false;
 
 
    public static GameManager GetInstance()
@@ -47,12 +48,15 @@ public class GameManager
 
     private void Reset()
     {
-        timeRemainig = 300;
+        timeRemainig = 420;
         puzzle1_solved = false;
         puzzle2_solved = false;
+        victory = false;
     }
    private GameManager()
    {
        gameState = GameState.MENU;
+       timeRemainig = 420;
+       victory = false;
    }
 }
