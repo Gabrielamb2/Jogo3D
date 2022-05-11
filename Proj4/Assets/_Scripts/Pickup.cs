@@ -6,12 +6,11 @@ public class Pickup : MonoBehaviour
 {
     public GameObject obj;
     public string name;
-    private AudioSource audio;
 
     GameManager gm;
     void Start(){
         gm = GameManager.GetInstance();
-        audio = GetComponent<AudioSource>();
+        
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -19,7 +18,6 @@ public class Pickup : MonoBehaviour
       Debug.Log("ola" + collision.gameObject.tag);
       
       if (collision.CompareTag("Player")){
-          audio.Play();
           Destroy(gameObject);
 
           if (name == "key") gm.has_key = true;

@@ -7,18 +7,22 @@ public class EnterHouse : MonoBehaviour
 
     private Animator anim;
     GameManager gm;
+    private AudioSource audio;
+
     
     void Start()
     {
         anim = GetComponent<Animator>();
         gm = GameManager.GetInstance();
+        audio = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider collision)
   {      
       if (collision.CompareTag("Player")){
           if (gm.has_key)
-            anim.SetTrigger("open");    
+            audio.Play();  
+            anim.SetTrigger("open");  
       }
   }
 }
