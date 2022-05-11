@@ -98,6 +98,7 @@
      <Compile Include="Assets\_Scripts\UI_Timer.cs" />
      <Compile Include="Assets\_Scripts\UI_FimDeJogo.cs" />
      <Compile Include="Assets\_Scripts\MagicRocks.cs" />
+     <Compile Include="Assets\_Scripts\Tutorial.cs" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
