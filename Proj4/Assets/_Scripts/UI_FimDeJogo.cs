@@ -36,19 +36,19 @@ public class UI_FimDeJogo : MonoBehaviour
         if(gm.victory && gm.timeRemainig >=0){
            message.text = "Você Ganhou!!";
 
-           // highscore
-        if ( (PlayerPrefs.GetInt("HighScore",(int)0)) >(int) gm.timeRemainig) 
-            PlayerPrefs.SetInt("HighScore",(int) (int)gm.timeRemainig);
+        //  // highscore
+        // if ( (PlayerPrefs.GetInt("HighScore",(int)0)) >(int) gm.timeRemainig) 
+        //     PlayerPrefs.SetInt("HighScore",(int) (int)gm.timeRemainig);
 
-        recorde = PlayerPrefs.GetInt("HighScore",(int)0.0);
+        // recorde = PlayerPrefs.GetInt("HighScore",(int)0.0);
 
-        minutes = Mathf.FloorToInt(gm.timeRemainig / 60);  
-        seconds = Mathf.FloorToInt(gm.timeRemainig % 60);
-        text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        // minutes = Mathf.FloorToInt(gm.timeRemainig / 60);  
+        // seconds = Mathf.FloorToInt(gm.timeRemainig % 60);
+        // text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if (recorde == gm.timeRemainig) score.text = "Novo melhor tempo!";
-        else score.text = $"Recorde: {text}";
-        highscore.text = $"Melhor tempo: {text}";
+        // if (recorde == gm.timeRemainig) score.text = "Novo melhor tempo!";
+        // else score.text = $"Recorde: {text}";
+        // highscore.text = $"Melhor tempo: {text}";  
 
        } 
        else{

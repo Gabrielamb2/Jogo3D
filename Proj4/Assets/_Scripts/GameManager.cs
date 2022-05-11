@@ -17,6 +17,9 @@ public class GameManager
    public bool puzzle1_solved = false;
    public bool puzzle2_solved = false;
    public bool victory = false;
+   public bool has_diamond = false;
+   public bool has_key = false;
+
 
 
    public static GameManager GetInstance()
@@ -52,6 +55,8 @@ public class GameManager
         puzzle1_solved = false;
         puzzle2_solved = false;
         victory = false;
+        has_diamond = false;
+        has_key = false;
     }
    private GameManager()
    {

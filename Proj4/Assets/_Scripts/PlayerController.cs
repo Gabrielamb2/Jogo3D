@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
    CharacterController characterController;
 
-    public float jumpForce = 30.0f;
+    public float jumpForce = 50.0f;
 
     GameManager gm;
 

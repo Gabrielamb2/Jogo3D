@@ -18,7 +18,6 @@ public class Floater : MonoBehaviour
         transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World); 
         tempPos = posOffset;
         tempPos.y += Mathf.Sin (Time.fixedTime * Mathf.PI * frequency) * amplitude;
- 
         transform.position = tempPos;
     }
 }

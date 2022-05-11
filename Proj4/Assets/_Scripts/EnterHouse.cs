@@ -6,15 +6,19 @@ public class EnterHouse : MonoBehaviour
 {
 
     private Animator anim;
+    GameManager gm;
     
     void Start()
     {
         anim = GetComponent<Animator>();
-        anim.SetTrigger("open");
+        gm = GameManager.GetInstance();
     }
 
-    void Update()
-    {
-        
-    }
+    private void OnTriggerEnter(Collider collision)
+  {      
+      if (collision.CompareTag("Player")){
+          if (gm.has_key)
+            anim.SetTrigger("open");    
+      }
+  }
 }
