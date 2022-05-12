@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce = 50.0f;
 
+    public float Altura= 50.0f;
+    private float gravityValue_pulo = -9.81f;
+
     GameManager gm;
 
 
@@ -38,10 +41,11 @@ public class PlayerController : MonoBehaviour
        if(!characterController.isGrounded){
            y = -_gravidade;
        }else{
-            if(Input.GetAxisRaw("Jump") != 0)
+            if(Input.GetAxisRaw("Jump") != 0 && characterController.isGrounded )
             {
                 // Debug.Log("Jump");
-                y = Mathf.Sqrt(jumpForce);
+                // y = Mathf.Sqrt(jumpForce);
+                y += Mathf.Sqrt(Altura * -3.0f * gravityValue_pulo);
             }
        }
        

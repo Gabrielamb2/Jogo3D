@@ -6,6 +6,8 @@ public class MagicRocks : MonoBehaviour
 {
 
     GameManager gm;
+    public AudioClip som_ganhou;
+    public AudioClip som_perdeu;
     void Start(){
         gm = GameManager.GetInstance();
     }
@@ -16,7 +18,12 @@ public class MagicRocks : MonoBehaviour
       
       if (collision.CompareTag("Player")){
           if(gm.timeRemainig > 0  && gm.gameState == GameManager.GameState.GAME) {
-            if (gm.has_diamond) gm.victory=true;
+            if (gm.has_diamond){
+              gm.victory=true;
+            AudioManager.PlaySFX(som_ganhou);
+            }else{
+              AudioManager.PlaySFX(som_perdeu);
+            }
             gm.ChangeState(GameManager.GameState.ENDGAME);
         }
       }
